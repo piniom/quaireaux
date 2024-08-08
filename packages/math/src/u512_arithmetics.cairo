@@ -40,6 +40,7 @@ pub impl U512Intou256X2 of Into<u512, u256X2> {
 }
 
 #[inline(always)]
+#[feature("deprecated-u256_overflow_add")]
 pub fn u512_add(lhs: u512, rhs: u512) -> u512 {
     let lhs: u256X2 = lhs.into();
     let rhs: u256X2 = rhs.into();
